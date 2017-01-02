@@ -15,15 +15,11 @@ The program takes video and find and show a free path.
 
 The parameters are (see the paper for details):
 
-**Ns:** Number of Sonars.
-
-**KK1:** The number of first Sonar that we want to use.
-
-**KK2:** The number of last Sonar that we want to use.
-
-**ii:** Start point in each Sonar.
-
-Typical parameters are Ns=24, KK1=10, KK2=27, ii=60.
+**Ns:** Number of Sonars. ...
+**KK1:** The number of first Sonar that we want to use. ...
+**KK2:** The number of last Sonar that we want to use. ...
+**ii:** Start point in each Sonar. ...
+Typical parameters are ***Ns=24, KK1=10, KK2=27, ii=60***.
 
 # ROS
 We use ROS to receive images from the camera or from a recorded sequence (rosbag). We have tested **Sonar_Vision in Ubuntu 12.04 with ROS Fuerte and Ubuntu 16.04 with ROS Kinetic**. If you do not have already installed ROS in your computer, we recommend you to install the Full-Desktop version of ROS Kinetic (http://wiki.ros.org/kinetic/Installation/Ubuntu).
