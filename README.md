@@ -39,11 +39,12 @@ go to sonar_vision pakage and replace src,include,CMakeLists.txt,package.xml.
     cd build
     cmake ..
     make
-  
+ 
+# Usage
 Befor run the package, we should Knowing the new package :
 
     . ~/catkin_ws/devel/setup.bash
     
-Run the package (we asume that you call the camera via camera node befor):
+Run the package (we assume that you call the camera via camera node before):
 
     rosrun sonar_vision sonar_vision
