@@ -26,13 +26,13 @@ go to catkin workspace/src:
 
     cd catkin_ws/src
     
-Creating sonar_vision package:
+Creating sonar_vision Package:
 
     catkin_create_pkg sonar_vision roscpp std_msgs geometry_msgs sensor_msgs nav_msgs angles tf image_transport cv_bridge
     cd ..
     catkin_make
 
-go to sonar_vision pakage and replace src,include,CMakeLists.txt.
+go to sonar_vision pakage and replace src,include,CMakeLists.txt,package.xml.
 
     cd catkin_ws/src/sonar_vision
     mkdir build
@@ -40,4 +40,10 @@ go to sonar_vision pakage and replace src,include,CMakeLists.txt.
     cmake ..
     make
   
-To compile the complete package, run:  
+Befor run the package, we should Knowing the new package :
+
+    . ~/catkin_ws/devel/setup.bash
+    
+Run the package (we asume that you call the camera via camera node befor):
+
+    rosrun sonar_vision sonar_vision
