@@ -24,6 +24,20 @@ We use OpenCV to manipulate images and features. If you use a ROS version Kineti
 # Installation
 go to catkin workspace/src:
 
-        cd catkin_ws/src
-       
- 
+    cd catkin_ws/src
+    
+Creating sonar_vision package:
+
+    catkin_create_pkg sonar_vision roscpp std_msgs geometry_msgs sensor_msgs nav_msgs angles tf image_transport cv_bridge
+    cd ..
+    catkin_make
+
+go to sonar_vision pakage and replace src,include,CMakeLists.txt.
+
+    cd catkin_ws/src/sonar_vision
+    mkdir build
+    cd build
+    cmake ..
+    make
+  
+To compile the complete package, run:  
