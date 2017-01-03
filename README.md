@@ -6,8 +6,8 @@ This code implemented with C++ programing Language under C programing Language S
 This package implemented in **ROS environment**.
 Implementation of the **Sonar-Vision** algorithm described in:
 
-1. Bamorovat Abadi,M.H, Asghari Oskoei,M. **“Effects of Mirrors in Mobile Robot Navigation Based on Omnidirectional Vision.”** 8th International Conference, ICIRA 2015, Portsmouth, UK, August 24-27, 2015.[[**PDF**]](https://bamorovatwo.files.wordpress.com/2016/12/intelligentroboticsandapplications.pdf)[[**BibTex**]](https://bamorovatwo.wordpress.com/bibtex1)
-2. Bamorovat Abadi,M.H., Asghari Oskoei,M. , Fakharian,A. **“Mobile robot navigation using sonar vision algorithm applied to omnidirectional vision.”** AI & Robotics (IRANOPEN), 2015,IEEE, {1-6}, 2015.[[**PDF**]](https://bamorovatwo.files.wordpress.com/2016/12/the-7th-robocup-iranopen-international-symposium-and-the-5th-joint-conference-of-ai-robotics.pdf)[[**BibTex**]](https://bamorovatwo.wordpress.com/bibtex2)
+1. Bamorovat Abadi,M.H, Asghari Oskoei,M. **“Effects of Mirrors in Mobile Robot Navigation Based on Omnidirectional Vision.”** 8th International Conference, ICIRA 2015, Portsmouth, UK, August 24-27, 2015.[[**PDF**]](https://bamorovat.files.wordpress.com/2016/12/intelligentroboticsandapplications.pdf)[[**BibTex**]](https://bamorovat.wordpress.com/bibtex1/)
+2. Bamorovat Abadi,M.H., Asghari Oskoei,M. , Fakharian,A. **“Mobile robot navigation using sonar vision algorithm applied to omnidirectional vision.”** AI & Robotics (IRANOPEN), 2015,IEEE, {1-6}, 2015.[[**PDF**]](https://bamorovat.files.wordpress.com/2016/12/the-7th-robocup-iranopen-international-symposium-and-the-5th-joint-conference-of-ai-robotics.pdf)[[**BibTex**]](https://bamorovat.wordpress.com/bibtex2/)
 
 ##### If you use ***Sonar_Vision_ROS*** in an academic work, **please cite it via above bibtex links**.
 Describing more about our project is in: https://www.bamorovat.wordpress.com
