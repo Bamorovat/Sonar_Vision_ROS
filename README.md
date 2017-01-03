@@ -1,6 +1,6 @@
 # Sonar_Vision_ROS
 ## Mobile Robot Navigation Based on Sonar Vision Algorithm and Omnidirectional Vision
-### Author: [Mohammad Hossein Bamorovat Abadi](https://bamorovatwo.wordpress.com/).
+### Author: [Mohammad Hossein Bamorovat Abadi](https://bamorovat.wordpress.com/).
 
 This code implemented with C++ programing Language under C programing Language Standard and **OpenCV Library**.
 This package implemented in **ROS environment**.
