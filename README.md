@@ -9,14 +9,15 @@ Implementation of the **Sonar-Vision** algorithm described in:
 1. Bamorovat Abadi,M.H, Asghari Oskoei,M. **“Effects of Mirrors in Mobile Robot Navigation Based on Omnidirectional Vision.”** 8th International Conference, ICIRA 2015, Portsmouth, UK, August 24-27, 2015.[[**PDF**]](https://bamorovat.files.wordpress.com/2017/01/intelligentroboticsandapplications.pdf)[[**BibTex**]](https://bamorovat.wordpress.com/bibtex1/)
 2. Bamorovat Abadi,M.H., Asghari Oskoei,M. , Fakharian,A. **“Mobile robot navigation using sonar vision algorithm applied to omnidirectional vision.”** AI & Robotics (IRANOPEN), 2015,IEEE, {1-6}, 2015.[[**PDF**]](https://bamorovat.files.wordpress.com/2017/01/the-7th-robocup-iranopen-international-symposium-and-the-5th-joint-conference-of-ai-robotics.pdf)[[**BibTex**]](https://bamorovat.wordpress.com/bibtex2/)
 
+The program takes video and find static and dynamic obstacles, and free path, and send commands to robot node to Navigation. The parameters are (see the paper for details):
+
+**Ns:** Number of Sonars. **KK1:** The number of first Sonar that we want to use. **KK2:** The number of last Sonar that we want to use. **ii:** Start point in each Sonar. Typical parameters are ***Ns=24, KK1=10, KK2=27, ii=60***.
+
+
 ##### If you use ***Sonar_Vision_ROS*** in an academic work, **please cite it via above bibtex links**.
 Describing more about our project is in: https://www.bamorovat.wordpress.com
 
 You can see a short movie of our robot Movement in: https://youtu.be/JKRwDcHyVbo
-
-The program takes video and find static and dynamic obstacles, and free path, and send commands to robot node to Navigation. The parameters are (see the paper for details):
-
-**Ns:** Number of Sonars. **KK1:** The number of first Sonar that we want to use. **KK2:** The number of last Sonar that we want to use. **ii:** Start point in each Sonar. Typical parameters are ***Ns=24, KK1=10, KK2=27, ii=60***.
 
 # ROS
 We use ROS to receive images from the camera or from a recorded sequence (rosbag). We have tested **Sonar_Vision in Ubuntu 12.04 with ROS Fuerte and Ubuntu 16.04 with ROS Kinetic**. If you do not have already installed ROS in your computer, we recommend you to install the Full-Desktop version of ROS Kinetic (http://wiki.ros.org/kinetic/Installation/Ubuntu).
