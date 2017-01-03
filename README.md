@@ -11,6 +11,7 @@ Implementation of the **Sonar-Vision** algorithm described in:
 
 ##### If you use ***Sonar_Vision_ROS*** in an academic work, **please cite it via above bibtex links**.
 Describing more about our project is in: https://www.bamorovat.wordpress.com
+
 You can see a short movie of our robot Movement in: https://youtu.be/JKRwDcHyVbo
 
 The program takes video and find static and dynamic obstacles, and free path, and send commands to robot node to Navigation. The parameters are (see the paper for details):
