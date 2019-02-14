@@ -20,27 +20,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <opencv2/highgui/highgui.hpp>
 #include "opencv2/imgproc/imgproc.hpp"
 
-#include "sobel_edg_detection.h"
+#include "light_reflection_elimination.h"
 
 using namespace cv;
 
-void sobel(Mat _main_Image, Mat& grad2,int Threshold) {
+int light_reflection_elimination(Mat Main_Image, int x_vector_point, int y_vector_point) {
 
-	Mat src_gray, grad;
-	int scale = 1;
-	int delta = 0.5;
-	int ddepth = CV_16S;
-
-	GaussianBlur(_main_Image, _main_Image, Size(5, 5), 0, 0, BORDER_DEFAULT);/// Convert it to gray
-	cvtColor(_main_Image, src_gray, CV_RGB2GRAY);/// Create window
-	Mat grad_x, grad_y;
-	Mat abs_grad_x, abs_grad_y;/// Gradient X
-	Sobel(src_gray, grad_x, ddepth, 1, 0, 3, scale, delta, BORDER_DEFAULT);
-	convertScaleAbs(grad_x, abs_grad_x);/// Gradient Y
-	Sobel(src_gray, grad_y, ddepth, 0, 1, 3, scale, delta, BORDER_DEFAULT);
-	convertScaleAbs(grad_y, abs_grad_y);/// Total Gradient (approximate)
-	addWeighted(abs_grad_x, 0.70, abs_grad_y, 0.70, 1, grad);
-
-    threshold(grad, grad2, Threshold, 255, 0);  //Threshold of Gradiant Edg Detector
+	Mat HSV_Image;
+	cvtColor(Main_Image, HSV_Image, CV_BGR2HSV);
+	Vec3b hsv = HSV_Image.at<Vec3b>(x_vector_point, y_vector_point);
+	//int H=hsv.val[0]; //hue
+	int Saturation = hsv.val[1]; //saturation
+	int Value = hsv.val[2]; //value
+	int Free_Point;
+	Free_Point = Value - Saturation;
+	return (Free_Point);
 }
 

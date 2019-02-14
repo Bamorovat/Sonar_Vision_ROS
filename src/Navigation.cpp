@@ -1,5 +1,4 @@
-
-/*	Sonar_Vision: An algorithm which can find a free path via the image.
+/*	Visual_Sonar: An algorithm which can find a free path via the image.
 
 Copyright (C) 2016 Mohammad Hossein Bamorovat Abadi
 
@@ -18,52 +17,56 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 */
 
-// Navigation Calculation ...................................................................
+#include <math.h>
+#include "Navigation.h"
 
-#include"Navigation.h"
+#define pi 180
+#define pii 3.1415
 
-#define pii 3.14
+    /// ..................................Navigation Part ...................................///
 
-void navigation (int SXX, int SYY, float *Harkat, float *Zavieh){
+void navigation (int X_Vector_Sum, int Y_Vector_Sum, float &Angular_Velocity , float &Linear_Velocity ){
 
-    *Harkat = 0;
-    *Zavieh = 0;
+    int Length_Vector = 0, X_Absolute = 0, Y_Absolute = 0;
+    float Degree=0, Beta=0, Teta=0;
 
-    float Teta2;
-    Teta2 = atan2(SXX,SYY);
+    Teta = atan2(X_Vector_Sum,Y_Vector_Sum);
+    Beta = (Teta*pi)/pii;
+    X_Absolute = fabs(X_Vector_Sum);
+    Y_Absolute = fabs(Y_Vector_Sum);
+    Length_Vector = sqrt((X_Absolute^2)+(Y_Absolute^2));
 
-    float Teta22=(Teta2*180)/pii;
+    Degree = 90+Beta;
 
-    SXX=fabs(SXX);
-    SYY=fabs(SYY);
 
-    int L2=sqrt((SXX^2)+(SYY^2));
 
-    int SF2 = L2;
-    float SA2 = Teta22;
+//    Linear_Velocity = Length_Vector/25;
+//    Angular_Velocity = Degree/50;
 
-    int SF = SF2;
-    float SA = SA2;
-    SA=90+SA;
 
-    if( SA <= 2 && SA >= -2){
-       *Harkat = 0.2;
-       *Zavieh = (SA/10);
-    }else if((SA >2 && SA <= 10) || (SA <-2 && SA >= -10)){
-       *Harkat = 0.15;
-       *Zavieh = (SA/100);
-    }else if((SA >10 && SA <= 25) || (SA <-10 && SA >= -25)){
-       *Harkat=0.1;
-       *Zavieh = (SA/100);
-    }else if((SA >25 && SA <= 40) || (SA <-25 && SA >= -40)){
-       *Harkat=0.06;
-       *Zavieh = (SA/100);
-    }else if (SA > 40 || SA < -40){
-       *Harkat=0;
-       *Zavieh = (SA/100);
+
+    if( Degree <= 2 && Degree >= -2){
+        Linear_Velocity = 0.2;
+        Angular_Velocity = (Degree/10);
+                }
+    else if((Degree >2 && Degree <= 10) || (Degree <-2 && Degree >= -10)){
+        Linear_Velocity = 0.15;
+        Angular_Velocity = (Degree/50);
     }
-    SA2=0 , SF2 = 0;
-    SA = 0, SF = 0;
-    L2 = 0;
-}
+    else if((Degree >10 && Degree <= 25) || (Degree <-10 && Degree >= -25)){
+        Linear_Velocity=0.1;
+        Angular_Velocity = (Degree/50);
+    }
+    else if((Degree >25 && Degree <= 40) || (Degree <-25 && Degree >= -40)){
+        Linear_Velocity=0.06;
+        Angular_Velocity = (Degree/50);
+    }
+    else if (Degree > 40 || Degree < -40){
+        Linear_Velocity=0;
+        Angular_Velocity = (Degree/50);
+    }
 
+
+    Length_Vector = 0, X_Absolute = 0, Y_Absolute = 0;
+
+}
