@@ -26,19 +26,13 @@ We use ROS to receive images from the camera or from a recorded sequence (rosbag
 We use OpenCV to manipulate images and features. If you use a ROS version Kinetic, OpenCV 3 is already included in the ROS distribution.
 
 # Installation
-go to catkin workspace/src:
+Download and copy the visual_sonar_ros file at to catkin workspace/src (**Note: Remove "-master" from the end of the file name**):
 
     cd catkin_ws/src
-    
-Creating sonar_vision Package:
 
-    catkin_create_pkg sonar_vision roscpp std_msgs geometry_msgs sensor_msgs nav_msgs angles tf image_transport cv_bridge
-    cd ..
-    catkin_make
+go to visual_sonar_ros pakage and run codes below at ubuntu terminal:
 
-go to sonar_vision pakage and replace src,include,CMakeLists.txt,package.xml.
-
-    cd catkin_ws/src/sonar_vision
+    cd catkin_ws/src/visual_sonar_ros
     mkdir build
     cd build
     cmake ..
@@ -49,6 +43,9 @@ Befor run the package, we should Knowing the new package :
 
     . ~/catkin_ws/devel/setup.bash
     
-Run the package (we assume that you call the camera via camera node before):
+Run the package:
 
-    rosrun sonar_vision sonar_vision
+    rosrun visual_sonar_ros visual_sonar_ros
+
+# Note
+A camera data should be run in to ROS and after that this Node should be run.
